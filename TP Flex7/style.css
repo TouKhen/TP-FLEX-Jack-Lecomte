@@ -129,4 +129,8 @@ textarea{
 	div p{
 		display: unset;
 	}
+
+	div p:last-child{
+		align-self: unset;
+	}
 }
