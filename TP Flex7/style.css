@@ -1,0 +1,132 @@
+/* COLORS & DECORATION
+
+=> BODY
+font-family: 'Raleway', sans-serif;
+background: rgba(157, 171, 214, 0.48);
+color: #333;
+font-size: 1.4em;
+
+=> H1
+color: #345;
+
+=> SPAN & ASIDE
+lightcoral
+
+=> bouton
+#3C65F5
+
+=> Textarea & Small
+#aaa
+
+=> pas de surlignage des champs du formulaire
+input:focus,
+textarea:focus {
+	outline: none;
+}
+*/
+
+/* Imports /!\ always on top */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+
+* {
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Raleway', sans-serif;
+    background: rgba(157, 171, 214, 0.48);
+    color: #333;
+	font-size: 1.4em;
+}
+
+h1{
+	color: #345;
+	text-align: center;
+}
+
+span,aside{
+	color: lightcoral;
+}
+
+p input:only-child{
+	background-color: #3C65F5;
+	border: none;
+	border-radius: 5px 5px;
+	color: white;
+	font-size: 18px;
+	padding: 10px;
+}
+
+input:focus,textarea:focus {
+	outline: none;
+}
+
+form{
+	display: flex;
+	justify-content: space-evenly;
+}
+
+div{
+	width: 40%;
+	background-color: white;
+	box-shadow: 0px 0px 16px 2px rgba(0,0,0,0.56);
+	box-sizing: border-box;
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+}
+
+div p:first-child{
+	text-align: center;
+}
+
+div p{
+	display: flex;
+	justify-content: space-between;
+}
+
+div p:last-child{
+	align-self: flex-end;
+}
+
+#name,#prenom,#email{
+	width: 70%;
+	border: 1px solid black;
+	padding: 10px;
+	border-radius: 3px 3px;
+	background-color: ghostwhite;
+}
+
+textarea{
+	height: 470px;
+}
+
+@media (min-width: 601px){}
+
+@media (max-width: 600px){
+	form{
+		flex-direction: column;
+	}
+
+	div{	
+		width: 97%;
+	}
+
+	div:nth-child(1){
+		margin-top: 20px;
+		order: 1;
+	}
+
+	#name,#prenom,#email{
+		width: 100%;
+	}
+
+	p input:only-child{
+		width: 100%;
+	}
+
+	div p{
+		display: unset;
+	}
+}
